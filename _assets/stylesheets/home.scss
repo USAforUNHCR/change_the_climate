@@ -1,0 +1,122 @@
+@keyframes spin {100%{ transform: rotate(360deg);}}
+$content-font: 'Source Sans Pro', sans-serif;
+$break-medium: 740px;
+$climate-bg: #93eff2;
+
+body{
+  font-family: $content-font; 
+}
+
+.home{
+  width:100%;
+}
+
+#climate-change{
+  background-color: $climate-bg;
+  padding-bottom: 8vh;
+}
+
+#climate-change-form{
+  margin: auto;
+  width: 60%;
+  & label{
+    width: 40vw;
+    text-align: right;
+  }
+}
+
+
+#video-container{
+}
+
+video{
+  width: 100%;
+  position:relative;
+  left:0;
+  top:0;
+}
+
+#info-points{
+  margin-top: 5%;
+  list-style: none;
+}
+
+#overlay-text{
+  z-index: 99;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  display: block;
+  color: white;
+  font-size: 28pt;
+  text-shadow: 2px 2px #646566  ;
+  padding:10%;
+  @media screen and (max-width: $break-medium){
+    font-size: 22pt;
+  }
+}
+
+#overlay-items{
+  font-size:26pt;
+}
+
+.fading-point{
+  display: none;
+}
+
+.message-heading{
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.message-content{
+  margin-left: 20vw;
+  margin-right: 10vw;
+  & img{
+    width:150px;
+    float: left;
+  }
+  & p{
+    padding-top: 5vh;
+    margin-bottom: 15vh;
+  }
+}
+
+#sustainable{
+  margin-top: 8vh;
+  & h1{
+    text-align: center;
+    font-weight: bold;
+    margin-left: 4vw;
+    margin-right: 5vw;
+  }
+}
+
+#wind-icon{
+  width:300px;
+  float:left;
+  /*background: black;*/
+  background-image: url("../images/wind_farm_base.png");
+  background-repeat: no-repeat;
+  & img{
+    /*float:left;*/
+    animation:spin 4s linear infinite;
+  }
+}
+
+
+#wind-content{
+ padding-top: 10vh;
+ margin-bottom: 10vh;
+}
+
+#water-icon{
+  width: 300px;
+  float: right;
+}
+
+#water-content{
+  text-align: right;
+  padding-top: 20vh;
+  margin-left: 3vw;
+}
